@@ -5,13 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!doctype html>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/style.css">
-    <title>store</title>
+    <title>Cat Pajamas</title>
 </head>
 
 <body>
+    <header class="container-fluid bg-info">
+        <div class="row">
+            <div class="col text-center">
+                <h1>Cat Pajamas</h1>
+            </div>
+        </div>
+    </header>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <form class="form-inline" onsubmit="app.itemsController.newItem(event)">
+                    <div class="form-group">
+                        <label for="title"></label>
+                        <input type="text" name="title" id="title" class="form-control" placeholder="title"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <label for="price"></label>
+                        <input type="number" name="price" id="price" class="form-control" placeholder="price"
+                            aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <label for="description"></label>
+                        <input type="text" name="description" id="description" class="form-control"
+                            placeholder="description" aria-describedby="helpId">
+                    </div>
+                    <div class="form-group">
+                        <label for="imgUrl"></label>
+                        <input type="url" name="imgUrl" id="imgUrl" class="form-control" placeholder="imgUrl"
+                            aria-describedby="helpId">
+                    </div>
+                    <button type="submit" class="btn btn-outline-success">add to store</button>
+                </form>
+            </div>
+        </div>
+        <div class="row" id="items">
+        </div>
+        <div class="row" id="cart">
+        </div>
+    </main>
+    <footer class="container-fluid bg-info">
+        <div class="row">
+            <div class="col text-center">
+                <p>Made by Troy Fuhriman and Brandon Chaney</p>
+            </div>
+        </div>
+    </footer>
 
-    <h1>Hello store</h1>
+
+
+
+
 
 
     <script src="app/main.js" type="module"></script>
